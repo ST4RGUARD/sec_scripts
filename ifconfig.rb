@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# an easier to view interface display 
+# an easier to view interface display  
 # need to color our status msg
 require 'paint'
 

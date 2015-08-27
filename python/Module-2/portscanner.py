@@ -4,8 +4,6 @@ __author__ = 'ma11ock'
 import socket
 import sys
 import _thread
-from datetime import datetime
-
 
 server = input("Enter host to scan: ")
 server_ip = socket.gethostbyname(server)
@@ -26,8 +24,6 @@ else:
 print("-" * 60)
 print("scanning host", server_ip)
 print("-" * 60)
-
-time_started = datetime.now()
 
 
 def create_threads():
@@ -59,10 +55,4 @@ def scanning(begin, end):
 
 create_threads()
 
-time_now = datetime.now()
-
-# Calculates the difference of time, to see how long it took to run the script
-total = time_now - time_started
-
-# Printing the information to screen
-print("Scanning Completed in: ", total)
+print("completed")

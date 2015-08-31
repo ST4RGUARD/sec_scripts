@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 __author__ = 'ma11ock'
-__version__ = '0.5'
+__version__ = '0.5' # major re-write cred to atomicmaster
 
 import os, sys, argparse, socket, threading
 
@@ -31,7 +31,7 @@ def check_port(host, port):
             print '[+] ' + str(banner)
     except:
         lock.acquire()
-        print '[-] %d/tcp closed'% port
+        #print '[-] %d/tcp closed'% port
     finally:
         lock.release()
         sock.close()

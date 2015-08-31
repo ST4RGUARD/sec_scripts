@@ -70,7 +70,7 @@ def main():
     ''' Make sure we have what we need, and can reach the target '''
     # we cant run if we dont have ports
     if len(args.ports) == 0:
-        print parser.usage
+        print parser.print_help()
         sys.exit("No ports or port ranges provided")
     # we can ask for a host to scan
     if len(args.host) == 0:

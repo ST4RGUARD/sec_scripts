@@ -6,7 +6,7 @@ require 'base64'
 class CryptoAPI
 
   def initialize(email)
-    @base = 'http://crypto.praetorian.com'
+    @base = 'http://*c*r*y*p**to**.pr**aetor**i*an.*com'
     @email = email
     @token = self.token
   end
@@ -37,7 +37,7 @@ end
 
 # Class values
 # Declare Class
-crypto = CryptoAPI.new('jmjsuperman@hotmail.com')
+crypto = CryptoAPI.new('blah')
 
 # Fetch level 
 level = 3
@@ -82,6 +82,6 @@ pp guess
 pp crypto.solve(level, guess)
 pp d = crypto.status
 
-puts 'Praetorian Crypto Challenge'
+puts '*P*r*&aetor**ian C*ryp*t*o C**hal**lenge'
 puts "  Level: #{d['level']}"
 puts "  Hash: #{d['hash']}"

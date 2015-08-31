@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+__author__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^__author__ = 'ma11ock'$/;"	variable	line:3
+threading	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+Queue	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+time	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+WorkerThread	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^class WorkerThread(threading.Thread):$/;"	class	line:7
+__init__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^    def __init__(self,queue):$/;"	member	line:8	class:WorkerThread
+run	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^    def run(self):$/;"	member	line:12	class:WorkerThread
+queue	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^queue = Queue.Queue()$/;"	variable	line:28

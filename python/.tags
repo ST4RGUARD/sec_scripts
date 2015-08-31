@@ -1,0 +1,22 @@
+__author__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^__author__ = 'ma11ock'$/;"	variable	line:3
+__version__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^__version__ = '0.5' # major re-write cred to atomicmaster$/;"	variable	line:4
+os	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^import os, sys, argparse, socket, threading$/;"	namespace	line:6
+sys	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^import os, sys, argparse, socket, threading$/;"	namespace	line:6
+argparse	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^import os, sys, argparse, socket, threading$/;"	namespace	line:6
+socket	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^import os, sys, argparse, socket, threading$/;"	namespace	line:6
+threading	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^import os, sys, argparse, socket, threading$/;"	namespace	line:6
+DEBUG	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^DEBUG = False$/;"	variable	line:8
+pprint	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^    import pprint$/;"	namespace	line:10
+pp	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^    pp = pprint.PrettyPrinter(depth=6, indent=4)$/;"	variable	line:11
+lock	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^lock = threading.Semaphore(value=1)$/;"	variable	line:14
+check_port	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^def check_port(host, port):$/;"	function	line:18
+scan	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^def scan(host, ports):$/;"	function	line:40
+main	/Users/ma11ock/Documents/sec_scripts/python/Module-2/portscanner.py	/^def main():$/;"	function	line:56
+__author__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^__author__ = 'ma11ock'$/;"	variable	line:3
+threading	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+Queue	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+time	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^import threading, Queue, time$/;"	namespace	line:5
+WorkerThread	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^class WorkerThread(threading.Thread):$/;"	class	line:7
+__init__	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^    def __init__(self,queue):$/;"	member	line:8	class:WorkerThread
+run	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^    def run(self):$/;"	member	line:12	class:WorkerThread
+queue	/Users/ma11ock/Documents/sec_scripts/python/Module-2/queue.py	/^queue = Queue.Queue()$/;"	variable	line:28

@@ -2,6 +2,8 @@
 # py2
 # NOTE    === not the most useful script - better to have this functionality built into something else
 # PURPOSE === build list of 10 ftp sites start 5 threads that rtrv 2 from the queue, log in, list dir
+# -- fulfills SPSE threading/locking/ftp exercises
+
 __author__ = 'ma11ock'
 
 import threading, Queue, time, sys

@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # py2
+# NOTE    === not the most useful script - better to have this functionality built into something else
+# PURPOSE === build list of 10 ftp sites start 5 threads that rtrv 2 from the queue, log in, list dir
 __author__ = 'ma11ock'
 
 import threading, Queue, time, sys
 from ftplib import FTP
 
-# currently running for loop at bottom creating 5 threads and only pulling
-# first 5 sites from queue - investigate
-
-# just some sites that allow anon login
 ftp_sites = [
             "ftp.leadtek.com.tw","ftp.gbnet.net","ftp.muze.nl",
             "ftp.radius.cistron.nl","ftp.sci.kun.nl","ftp.stack.nl",
@@ -26,27 +24,37 @@ class WorkerThread(threading.Thread):
 
     def ftp(self):
         site = self.queue.get()
+        site2 = self.queue.get()
         lock.acquire()
         try:
             print "------------------------"
-            print "connecting to site: %s" % site
+            print "CONNECTING to: %s" % site
+            print "CONNECTING to: %s" % site2
             ftp = FTP(site)                             # connect to host, default port
-            print "logging in to site: %s" % site
+            ftp2 = FTP(site)
+            print "LOGGING in to: %s" % site
+            print "LOGGING in to: %s" % site2
             ftp.login()                                 # user anonymous, passwd anonymous@
+            ftp2.login()
             print "----- dir contents -----\n"
             ftp.dir()                                   # list directory contents
-            print "exiting site: " % site
+            print "----- dir contents -----\n"
+            ftp2.dir()
+            print "\nEXITING: %s " % site
+            print "EXITING: %s " % site2
         except:
             sys.exit("permission denied")
         finally:
             lock.release()
             self.queue.task_done()
+            self.queue.task_done()
+
 
     def run(self):
         # put wtv code we want to run here
         print "In WorkerThread"
         while True:
-            2*WorkerThread.ftp(self)
+            WorkerThread.ftp(self)
 
 queue = Queue.Queue()
 for j in ftp_sites:
@@ -63,6 +71,7 @@ for i in range(5):
 
 queue.join()
 
+print
 print "All tasks complete"
 
 

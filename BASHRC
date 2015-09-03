@@ -3,7 +3,7 @@ PS1="\[\e[31;40m\]ma11ock\[\e[0m\]\[\e[37;40m\]:\[\e[0m\]\[\e[36;40m\]\t\[\e[0m\
 # safety first
 alias mv='mv -i'
 alias rm='rm -i'
-alias ifconfig='/Users/ma11ock/Documents/sec_scripts/ifconfig.rb'
+alias ifconfig='/Users/ma11ock/Documents/sec_scripts/ruby/ifconfig.rb'
 alias be='bundle exec'
 alias ber='bundle exec rails'
 alias tn='/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier'

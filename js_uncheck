@@ -1,1 +1,0 @@
-is=document.getElementsByTagName("input");for(var idx=0;idx<is.length;idx++){i=is[idx];if(i.type=="checkbox"){i.checked=false;}}

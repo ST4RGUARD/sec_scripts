@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a11a297-73eb-42b5-a2a7-9b27d8b4ce52" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module-2/ftp_enum.py" afterPath="$PROJECT_DIR$/Module-2/ftp_enum.py" />
-    </list>
+    <list default="true" id="2a11a297-73eb-42b5-a2a7-9b27d8b4ce52" name="Default" comment="" />
     <ignored path="python.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="ftp_enum.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Module-2/ftp_enum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07629705">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.68667346">
+              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding>
                 <element signature="e#309#343#0" expanded="true" />
               </folding>
@@ -683,8 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Module-2/ftp_enum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07629705">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.68667346">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding>
             <element signature="e#309#343#0" expanded="true" />
           </folding>

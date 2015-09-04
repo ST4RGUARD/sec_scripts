@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6992db-2d78-4991-a043-174c5cc22464" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/psFund/classesObjects.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/psFund/flowControl.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/psFund/varNilMethodsScope.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ruby.iml" afterPath="$PROJECT_DIR$/.idea/ruby.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
     </list>
     <ignored path="ruby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +52,8 @@
       <file leaf-file-name="flowControl.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/psFund/flowControl.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7794118">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="2" selection-end-line="93" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.5588235">
+              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -492,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/psFund/flowControl.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7794118">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="2" selection-end-line="93" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.5588235">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="32" />
           <folding />
         </state>
       </provider>

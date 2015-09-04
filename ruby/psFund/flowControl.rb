@@ -82,13 +82,85 @@ line = if num > 3 then "blah" else "poo" end
 #   i += 1
 # end
 
-# for i in 1..100 do
-#   puts "num=" + i.to_s
-#   if i % 5 == 0 && i % 3 == 0
-#     puts "fizzbuzz"
-#   elsif i % 3 == 0
-#     puts "fizz"
-#   elsif i % 5 == 0
-#     puts "buzz"
+# EXCEPTIONS
+# here rescues after batten_hatches, but light_sign could also throw errors so
+# def launch
+#   begin
+#     batten_hatches
+#   rescue
+#     puts "couldn't batten"
+#     false
+#   end
+#   light_sign
+# end
+# # do like this - launch will return false if error incurred for either method + prob is generic msg
+# def launch
+#   batten_hatches
+#   light_sign
+#   true
+# rescue
+#   puts "Exception intercepted"
+#   false
+# end
+# if LightError came from StandardError and we define StdError first Light Error would never be triggered
+# StdError would catch all exceptions including LightError
+# def launch
+#   batten_hatches
+#   light_sign
+#   true
+# rescue LightError
+#   puts "Lights not working still launch"
+#   true
+# rescue StandardError => e
+#   puts e.message
+#   false
+# end
+#
+# # bad idea - bc will catch SignalException and SyntaxError
+# begin
+#   ship = Spaceship.new
+#   ship.launch
+# rescue Exception => e
+#   puts e.message
+#   puts e.backtrace
+# end
+
+# RAISE EXCEPTION
+
+# don't put rtrn statement in ensure as any errors thrown in method will get swallowed by rtrn in ensure
+# rtrn will execute instead
+
+# def batten_hatches
+#   hatch_file = File.open("hatches.txt")
+#   # ..
+#   raise HatchError, "Door Jammed" if door.jammed?
+#   # ..
+#   true
+# rescue SystemCallError => e
+#   # handle system call errors
+#   false
+# else          # after rescue but b4 ensure
+#   puts "Well done no exceptions"
+# ensure        # always executed
+#   hatch_file.close if hatch_file
+# end
+
+# RETRY
+# xfer to beginning of begin end block or beg of method
+
+# def batten_hatches
+#   hatch_list = API.request("/hatches")  # <--
+#   # ...
+# rescue RuntimeError => e
+#   attempts ||= 0
+#   attempts += 1
+#   if attempts < 3
+#     puts e.message + ". Retrying request."
+#     retry                               #  <--
+#   else
+#     puts "Request failed"
+#     raise
 #   end
 # end
+
+# throw catch - if need exception like non linear flow control but aren't handling errors

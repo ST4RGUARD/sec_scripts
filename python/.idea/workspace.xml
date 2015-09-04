@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a11a297-73eb-42b5-a2a7-9b27d8b4ce52" name="Default" comment="" />
+    <list default="true" id="2a11a297-73eb-42b5-a2a7-9b27d8b4ce52" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ruby/ps_fund_Module-1/varNilMethodsScope.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ruby/.idea/ruby.iml" afterPath="$PROJECT_DIR$/../ruby/.idea/ruby.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ruby/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ruby/.idea/workspace.xml" />
+    </list>
     <ignored path="python.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -47,8 +51,8 @@
       <file leaf-file-name="ftp_enum.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Module-2/ftp_enum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68667346">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.10681587">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#309#343#0" expanded="true" />
               </folding>
@@ -538,7 +542,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-102" width="1916" height="1080" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -681,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Module-2/ftp_enum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68667346">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.10681587">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#309#343#0" expanded="true" />
           </folding>

@@ -10,10 +10,10 @@ require 'json'
 # c computer piece
 # p player piece
 
-class RotaAPI
+class RxoxtxxaxAPI
 
   def initialize
-    @base_url = 'https://rota.praetorian.com/rota/service/play.php'
+    @base_url = 'https://rota.pxrxxaetxoxrxixxxan.com/rota/service/play.php'
     res = RestClient.get("#{@base_url}?request=new")
     @cookies = res.cookies
   end
@@ -39,7 +39,7 @@ class RotaAPI
 end
 
 
-pp @game = RotaAPI.new
+pp @game = RxxoxtxaAPI.new
 
 # ideally would write code to check board "---------" to make sure player goes first
 # but ctrl-c up arrow Enter is our friend here 0_0

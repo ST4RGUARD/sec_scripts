@@ -16,7 +16,6 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/psFund/varNilMethodsScope.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
@@ -36,7 +35,6 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/psFund/classesObjects.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
@@ -56,7 +54,6 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/psFund/flowControl.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
@@ -76,7 +73,6 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/unixProcesses.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
@@ -96,7 +92,6 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/psFund/standardTypes.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
@@ -106,7 +101,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.2 [global]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="io-console (v0.4.3, RVM: ruby-2.2.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="paint (v1.0.0, RVM: ruby-2.2.2 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.0, RVM: ruby-2.2.2 [global]) [gem]" level="application" />
   </component>
 </module>

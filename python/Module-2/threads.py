@@ -1,7 +1,7 @@
 __author__ = 'ma11ock'
 
 
-import _thread
+import threading
 import time
 
 
@@ -15,7 +15,8 @@ def worker_thread(id):
         count += 1
 
 for i in range(5):
-    _thread.start_new_thread(worker_thread, (i,))
+    thread = threading.Thread(target=worker_thread, args=(i,))
+    thread.start()
 
 print("Main thread going for a infinite wait loop")
 while True:

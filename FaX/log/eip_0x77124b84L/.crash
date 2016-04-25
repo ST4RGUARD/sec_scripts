@@ -1,0 +1,29 @@
+-------------------
+        INFO
+-------------------
+
+
+Fuzzing Media Player
+
+
+-------------------
+      CONTEXT
+-------------------
+
+
+CONTEXT DUMP
+  EIP: 77124b84 rep movsd
+  EAX: 056f2ad4 (  91171540) -> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (heap)
+  EBX: 00003ef4 (     16116) -> N/A
+  ECX: 000000b8 (       184) -> N/A
+  EDX: 00003ef4 (     16116) -> N/A
+  EDI: 056f66e8 (  91186920) -> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (heap)
+  ESI: 04861000 (  75894784) -> N/A
+  EBP: 0013df20 (   1302304) -> `....3s.....(=............x.\wx...x......\.wH.x.............T........b.wH.x.,.................r...r.......x.....H.x............|...|.......|........`..@...|8.........q.........(......... .......r........|........\O.w.. .H.x.........(...........\........Nr. (stack)
+  ESP: 0013df14 (   1302292) -> ..x.H.x.....`....3s.....(=............x.\wx...x......\.wH.x.............T........b.wH.x.,.................r...r.......x.....H.x............|...|.......|........`..@...|8.........q.........(......... .......r........|........\O.w.. .H.x.........(........... (stack)
+  +00: 04788994 (  75008404) -> ..x...x...x..hx.......x..gx...x.......x...x..hx...x...x...x..gx...x.......x.Hhx...x...x.......x..hx...x...x.......x...q.\.o.......q.............................x.x...x...x.......x...x...x...x... ...x...x...x...x.......x. .x...x...x...x..gx...x.....p.x...x. (heap)
+  +04: 04788a48 (  75008584) -> ..x...x...x... ...x...x...x...x.......x. .x...x...x...x..gx...x.....p.x...x...x.p.x.......x.P.x...x.p.x.......x...x...x...x...x..gx...x.......x...x...x...x.......x...x...x...x.......x.....$&w.6&w...................x...x...x...x.0.x...........x...x......... (heap)
+  +08: 0485d3ec (  75879404) -> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (heap)
+  +0c: 0013df60 (   1302368) -> .....b.wH.x.,.................r...r.......x.....H.x............|...|.......|........`..@...|8.........q.........(......... .......r........|........\O.w.. .H.x.........(...........\........Nr.H.x... ....`....(...........\...(...........\wx...x........uH.x. (stack)
+  +10: 1b733393 ( 460534675) -> N/A
+  +14: 0485d3ec (  75879404) -> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (heap)

@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<style>
+			body
+			{
+			  padding: 30px;
+			  background-color: black;
+			}
+			.outer-div
+			{
+			  padding: 30px;
+			  text-align: center;
+			  background-color: #f3f3f3;
+			}
+			.inner-div
+			{
+			  display: inline-block;
+			  padding: 50px;
+			  background-color: #ccc;
+			  border-radius: 3px;
+			}
+		</style>
+		<title id="status"></title>
+		<script src="axman.js" language="javascript"></script>
+		<script src="conf/objects.js" language="javascript"></script>
+		<script>
+			function log(msg) {
+				document.getElementById("report").innerHTML += msg + "<br>\n";
+			}
+			// Start this off at -1
+			var idx = -1;
+			// Single object mode
+			var sin = false;
+			
+			function next() {
+				idx += 1;
+				if (ax_objects[idx]) {
+					updateStatus(ax_objects[idx].toString().toUpperCase() + ' (' + (idx+1) + ' of ' + ax_objects.length + ')');
+					// This forces the DLL cleanup routines from the last test to activate
+					window.frames['ax'].location.href = "about:blank";
+					// Load up the next control...
+					window.status = "Trying to load "+ax_objects[idx]+" ("+idx+")...";
+					window.frames['ax'].location.href = "fuzzer.html?"+ax_objects[idx];
+					// Only allow one object in single mode
+					if (sin) idx = ax_objects.length;
+				} else {
+					updateStatus('Completed');
+					window.status = 'Completed';
+					stopFuzz();
+				}
+			}
+			function updateStatus(msg) {
+				document.title = 'Status: ' + msg;
+			}
+			<!-- need to write a delay long enough to let logcrash execute b4 starting to run the fuzzer -->
+			function startFuzz() {
+				sin = false
+				document.getElementById('stop').disabled = false;
+				document.getElementById('start').disabled = true;
+				document.getElementById('startSingle').disabled = true;
+				document.getElementById("report").innerHTML = '';
+				next();	
+			}
+			function stopFuzz() {
+				idx = ax_objects.length;
+				document.getElementById('start').disabled = false;
+				document.getElementById('startSingle').disabled = false;
+				document.getElementById('stop').disabled = true;
+			}
+			function startSingleFuzz() {
+				var cls = document.getElementById('singleclsid').value.toUpperCase();
+				if (cls.substring(0,1) != '{') 
+					cls = '{' + cls + '}';
+
+				for (var i = 0; i < ax_objects.length; i++) {
+					if (ax_objects[i].toUpperCase() == cls) {
+						idx = i - 1;
+						sin = true;
+						document.getElementById('startSingle').disabled = true;
+						document.getElementById('start').disabled = true;						
+						document.getElementById("report").innerHTML = '';
+						next();		
+						return(0);
+					}
+				}	
+				alert('Class ' + cls + ' was not found in objects.js!');	
+			}
+			// These are our fuzzing functions
+			function optPropReadOnly() { return document.getElementById('chkPropReadOnly').checked; }
+			function optPropReadWrite() { return document.getElementById('chkPropReadWrite').checked; }
+			function optPropFuzzNum() { return document.getElementById('chkPropFuzzNum').checked; }
+			function optPropFuzzStr() { return document.getElementById('chkPropFuzzStr').checked; }
+			function optPropFuzzObj() { return document.getElementById('chkPropFuzzObj').checked; }
+			function optMethFuzz() { return document.getElementById('chkMethFuzz').checked; }
+			function optSingle() { return sin; }
+			<!-- initial status msg if objects are loaded - may alter once integrated with wei's code -->
+			function init(){ 
+				try {
+					updateStatus('Loaded ' + ax_objects.length + ' objects');
+					startFuzz();
+				} catch(e) {
+					updateStatus('Broken installation, conf/objects.js is not accessible');
+				} 
+			}
+		</script>
+	</head>
+	<body onLoad='init()' bgcolor='black'>
+		<div style='display: none;'>
+			<input id='start' type="button" onClick="startFuzz()">
+			<input id='stop' type="button" onClick="stopFuzz()"> 			
+		</div>
+		<div class="outer-div">
+			<div class="inner-div">
+				<input id='startSingle' type="button" onClick="startSingleFuzz()" value="pWN!"> 
+					CLSID: <input id='singleclsid'  type='text' size='60' value='' onclick="stopFuzz()">
+			</div>
+		</div>
+		<!-- Don't Display Fuzz Methods - all selected by default -->
+		<div style='display: none;'>
+		<input type='checkbox' id='chkPropReadOnly'> Property Read-Only <br> 
+		<input type='checkbox' id='chkPropReadWrite'> Property Read-Write <br>
+		<input type='checkbox' id='chkPropFuzzNum' checked> Property Write Numeric <br>
+		<input type='checkbox' id='chkPropFuzzStr' checked> Property Write Strings <br>
+		<input type='checkbox' id='chkPropFuzzObj' checked> Property Write Objects <br>
+		<input type='checkbox' id='chkMethFuzz' checked> Method Fuzzing <br>
+		<iframe id="ax" name="ax" src="about:blank" width="100%" height="200" border=0></iframe>
+		<div id="report" width='100%' bgcolor='#eeeeee'>
+		</div>
+	</body>
+</html>

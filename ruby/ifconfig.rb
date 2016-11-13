@@ -1,12 +1,12 @@
 #!/usr/bin/ruby
 
 # an easier to view interface display  
-# need to color our status msg
 require 'paint'
 
 # iterate through interfaces
+
 def findInterfaces()
-  if ARGV[0] == "-o"
+  if ARGV[0] == "-v"
     puts `ifconfig #{ARGV[1]} #{ARGV[2]}`
   else
     seq = 0..9
@@ -25,7 +25,7 @@ def findInterfaces()
         en_container << Paint["en#{num} - #{status}", :green]
         en_container << Paint["#{ip}", :white]
       elsif en.size > 0 && status == "inactive"
-        en_container << Paint["en#{num} - #{status}", :black]
+        en_container << Paint["en#{num} - #{status}", "#404040"]
         en_container << ip if ip.size > 0
       end
       if vmnet.size > 0

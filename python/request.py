@@ -29,7 +29,7 @@ def create_attack():
     # buffer += 'Connection: keep-alive\r\n\r\n'
 
     #buffer += '{"jsronrpc":"2.0","id":1,"method":"login","params":{"user":"admin","passwd":""}}'
-    print buffer
+    print(buffer)
     return buffer
 
 def send_attack():

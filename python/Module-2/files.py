@@ -18,10 +18,6 @@ fdesc = open("file.txt", "r")
 for line in fdesc.readlines():
     print(line.strip())
 
-import os
-os.rename()
-os.delete()
-
 # EXERCISE
 # read /var/log/messages
 

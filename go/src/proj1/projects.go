@@ -6,4 +6,5 @@ func main() {
 	constant()
 	bool()
 	iotas()
+	hello()
 }

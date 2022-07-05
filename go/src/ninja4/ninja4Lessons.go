@@ -71,9 +71,9 @@ func makez() {
 }
 
 func multidimSlice() {
-	jj := []string{"Jarrod", "Johnson", "Oreo", "Coffee"}
+	jj := []string{"Jfjwo", "Jafjow", "Oreo", "Coffee"}
 	fmt.Println(jj)
-	cj := []string{"Courtney", "Johnson", "Chocolate", "Tea"}
+	cj := []string{"Cfwafw", "Jafea", "Chocolate", "Tea"}
 	fmt.Println(cj)
 	xp := [][]string{jj, cj}
 	fmt.Println(xp)

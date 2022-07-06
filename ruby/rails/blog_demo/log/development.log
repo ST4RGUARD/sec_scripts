@@ -1209,3 +1209,23 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2887)
 
 
+Started GET "/" for ::1 at 2022-07-06 08:11:45 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2606)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 2869)
+
+
+Started GET "/" for ::1 at 2022-07-06 08:11:47 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2630)
+Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 2893)
+
+

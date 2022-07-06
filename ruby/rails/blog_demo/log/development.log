@@ -1229,3 +1229,991 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 2893)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20220706134349)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220706134349"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-07-06 13:47:40.054831"], ["updated_at", "2022-07-06 13:47:40.054831"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-07-06 08:53:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 276)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 15243)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 16232)
+
+
+Started GET "/" for ::1 at 2022-07-06 08:53:42 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2649)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2936)
+
+
+Started GET "/about" for ::1 at 2022-07-06 08:53:43 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2740)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3062)
+
+
+Started GET "/" for ::1 at 2022-07-06 08:53:46 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2636)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2906)
+
+
+Started GET "/about" for ::1 at 2022-07-06 08:53:51 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2633)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+Started GET "/" for ::1 at 2022-07-06 08:53:52 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2612)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2881)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "First Post!"], ["body", "This is a test post"], ["created_at", "2022-07-06 15:26:49.754682"], ["updated_at", "2022-07-06 15:26:49.754682"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/post" for ::1 at 2022-07-06 10:26:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/post"):
+  
+Started GET "/posts" for ::1 at 2022-07-06 10:27:01 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.7ms | Allocations: 258)
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6398)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 9042)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 10622)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 10:53:19 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1238)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4278)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 15126)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 10:58:16 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1674)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4734)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5614)
+
+
+Started GET "/" for ::1 at 2022-07-06 10:58:22 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 257)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3079)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3727)
+
+
+Started GET "/" for ::1 at 2022-07-06 10:58:23 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2615)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+Started GET "/about" for ::1 at 2022-07-06 10:58:24 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 173)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2763)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3101)
+
+
+Started GET "/" for ::1 at 2022-07-06 10:58:25 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2612)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2881)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 10:58:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 821)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3216)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4123)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 11:00:35 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1224)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4273)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 5614)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:00:45 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 257)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3085)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3734)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:00:47 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2740)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3097)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:01:45 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 256)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3545)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4373)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:03:04 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 179)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2771)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3112)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 11:03:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.4ms | Allocations: 184)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1222)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3807)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 5010)
+
+
+Started GET "/posts/1/edit" for ::1 at 2022-07-06 11:03:08 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 22.4ms | Allocations: 15726)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 23.2ms | Allocations: 16114)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 18635)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.1ms | Allocations: 19549)
+
+
+Started GET "/posts/1/edit" for ::1 at 2022-07-06 11:04:51 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.5ms | Allocations: 1613)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2034)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5069)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 6488)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:04:56 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 257)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3100)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3748)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:04:57 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 176)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2745)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3102)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:05:00 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2633)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:05:03 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2651)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2922)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:05:04 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2636)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2905)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:05:04 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2624)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2893)
+
+
+Started GET "/posts/1/edit" for ::1 at 2022-07-06 11:05:18 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1624)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2047)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5082)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 6458)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:05:40 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.8ms | Allocations: 178)
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1463)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3872)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4254)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:05:42 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.4ms | Allocations: 1015)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1269)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3680)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 4049)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:07:18 -0500
+Processing by PostsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/posts_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.4ms | Allocations: 1252)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1383)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 15625)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.6ms | Allocations: 19331)
+
+
+Started POST "/posts" for ::1 at 2022-07-06 11:07:20 -0500
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.2ms | Allocations: 4885)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5001)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 7512)
+Completed 422 Unprocessable Entity in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 9143)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:07:59 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.3ms | Allocations: 1542)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1898)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4944)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5808)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:08:02 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.5ms | Allocations: 985)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1093)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3499)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3807)
+
+
+Started POST "/posts" for ::1 at 2022-07-06 11:08:03 -0500
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.1ms | Allocations: 4597)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4705)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 7108)
+Completed 422 Unprocessable Entity in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8256)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:08:59 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.1ms | Allocations: 1539)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1896)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4942)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 5782)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:09:01 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 982)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1090)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3493)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3800)
+
+
+Started POST "/posts" for ::1 at 2022-07-06 11:09:06 -0500
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.2ms | Allocations: 4597)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4705)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7109)
+Completed 422 Unprocessable Entity in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 8252)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:09:18 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.0ms | Allocations: 1539)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1898)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4947)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5788)
+
+
+Started POST "/posts" for ::1 at 2022-07-06 11:09:28 -0500
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.8ms | Allocations: 4597)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4705)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 7112)
+Completed 422 Unprocessable Entity in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 8276)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:09:56 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1577)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3982)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4399)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 11:10:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 793)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3191)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4681)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:10:05 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 932)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3335)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3617)
+
+
+Started GET "/posts/1" for ::1 at 2022-07-06 11:10:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 588)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2984)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3742)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:10:10 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 917)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3324)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3605)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:10:13 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 979)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1087)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3490)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3774)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:10:15 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 917)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3320)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3601)
+
+
+Started GET "/posts/new" for ::1 at 2022-07-06 11:10:16 -0500
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 979)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1087)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3490)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3773)
+
+
+Started POST "/posts" for ::1 at 2022-07-06 11:10:17 -0500
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.9ms | Allocations: 4582)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4690)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 7085)
+Completed 422 Unprocessable Entity in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8153)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:12:38 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 268)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3124)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3896)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:12:39 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2624)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2911)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:12:40 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 176)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2743)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3082)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:12:40 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2616)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2885)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:12:42 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2646)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2916)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:16:36 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2621)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 2888)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:17:04 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2623)
+Completed 200 OK in 5ms (Views: 4.1ms | Allocations: 2889)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:17:06 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2603)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 2870)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:08 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 260)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3534)
+Completed 200 OK in 8ms (Views: 7.1ms | Allocations: 4351)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:18:12 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 177)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2766)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 3103)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:13 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2624)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 2890)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:30 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 258)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3541)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4358)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:31 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2609)
+Completed 200 OK in 7ms (Views: 6.7ms | Allocations: 2894)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:18:32 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 179)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2758)
+Completed 200 OK in 5ms (Views: 4.1ms | Allocations: 3077)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:32 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2647)
+Completed 200 OK in 4ms (Views: 3.1ms | Allocations: 2915)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:18:34 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2624)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 2890)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:18:37 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2612)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 2879)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:19:51 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 119)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 14630)
+Completed 200 OK in 12ms (Views: 11.8ms | Allocations: 15265)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:19:56 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 53)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2610)
+Completed 200 OK in 5ms (Views: 3.9ms | Allocations: 2893)
+
+
+Started GET "/about/posts" for ::1 at 2022-07-06 11:20:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/about/posts"):
+  
+Started GET "/about/" for ::1 at 2022-07-06 11:20:10 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2654)
+Completed 200 OK in 4ms (Views: 3.1ms | Allocations: 2918)
+
+
+Started GET "/about/" for ::1 at 2022-07-06 11:20:40 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 255)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3544)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 4355)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:20:42 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2621)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2906)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:20:42 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2612)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2878)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:20:43 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 226)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2801)
+Completed 200 OK in 11ms (Views: 10.6ms | Allocations: 3121)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:20:44 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3488)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6113)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 7828)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:21:02 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2645)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2938)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:21:04 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2615)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2884)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:21:25 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 304)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3601)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4430)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:21:26 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.3ms | Allocations: 184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1646)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4271)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4952)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:21:35 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2648)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2937)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:21:36 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 935)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3344)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3630)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:21:37 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 220)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2780)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3103)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:21:38 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 923)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3326)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 3607)
+
+
+Started GET "/" for ::1 at 2022-07-06 11:21:39 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 82)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 2651)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 2920)
+
+
+Started GET "/posts" for ::1 at 2022-07-06 11:21:41 -0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 947)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3365)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.1ms | Allocations: 3647)
+
+
+Started GET "/about" for ::1 at 2022-07-06 11:21:41 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2645)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2915)
+
+

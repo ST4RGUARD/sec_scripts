@@ -12,16 +12,20 @@
         <li class="nav-item">
           <%= link_to "About", about_path, class:'nav-link' %>
         </li>
+        <li class="nav-item">
+          <%= link_to "Blog", posts_path, class: "nav-link"%>
+        </li>
         </ul>
         <ul class="nav navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a href="#" class="dropdown-item">Reports</a>
-                <a href="#" class="dropdown-item">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Logout</a>
-            </div>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><%= link_to "New Post", new_post_path, class: "dropdown-item" %></li>
+                <li><a href="#" class="dropdown-item">Reports</a></li>
+                <li><a href="#" class="dropdown-item">Settings</a></li>
+                <li><div class="dropdown-divider"></div></li>
+                <li><a href="#" class="dropdown-item">Logout</a></li>
+            </ul>
           </li>
         </ul>
       </div>

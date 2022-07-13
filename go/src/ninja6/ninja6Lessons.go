@@ -84,16 +84,70 @@ func secretAgents() {
 	me(spy2)
 }
 
+func barReturn() func() int {
+	return func() int {
+		return 1984
+	}
+}
+
+func even(f func(xi ...int) int, vi ...int) int {
+	var yi []int
+	for _, v := range vi {
+		if v%2 == 0 {
+			fmt.Println("even :", v)
+			yi = append(yi, v)
+		} else {
+			fmt.Println("odd :", v)
+		}
+	}
+	return f(yi...)
+}
+
+func factorialR(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * factorialR(n-1)
+}
+
+//4*3*2*1
+func factorialL(n int) int {
+	total := 1
+	for ; n > 0; n-- {
+		total *= n
+	}
+	return total
+}
+
 func main() {
 	x, y := funcLesson("won", "der")
 	fmt.Println(x)
 	fmt.Println(y)
 	variadicSum(3, 4, 5, 6, 7, 8)
-	xi := []int{3, 4, 5, 6}
+	xi := []int{3, 4, 5, 6, 8, 9, 10, 11}
+	num2 := even(variadicSum, xi...)
+	fmt.Println(num2)
 	z := variadicSum(xi...)
 	fmt.Println(z)
 	// ensure order execution
 	defer foo()
 	bar()
 	secretAgents()
+	func(x int) {
+		fmt.Println("anon func #", x)
+	}(23)
+
+	f := func(exp string) {
+		fmt.Println("my expression", exp)
+	}
+	f("woo")
+	//returning a func
+	br := barReturn()
+	fmt.Printf("%T\n", br)
+	num := br()
+	fmt.Println(num)
+	n := factorialR(4)
+	l := factorialL(4)
+	fmt.Println(n)
+	fmt.Println(l)
 }

@@ -1,2 +1,2 @@
 puts "hi"
-puts "no"
+p "no"

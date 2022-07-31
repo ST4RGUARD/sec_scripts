@@ -12,17 +12,19 @@
 # sale.call
 
 module Sale
+  # trying a module
   module FormBuilder
     class << self
       def call(params)
         subtotal = params[:subtotal]
         state_name = params[:state_name]
 
-        tax_amount = subtotal * self.tax_rate(state_name)
+        tax_amount = subtotal * tax_rate(state_name)
         subtotal + tax_amount
       end
 
-    private
+      private
+
       def tax_rate(state)
         case state
         when 'AZ'
@@ -43,4 +45,4 @@ form_data = {
   state_name: 'AZ'
 }
 
- Sale::FormBuilder.call(form_data)
+Sale::FormBuilder.call(form_data)

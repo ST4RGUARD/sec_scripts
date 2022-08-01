@@ -20,12 +20,12 @@ require 'openssl'
 # s = UDPSocket.new
 # s.send(buffer,0,"10.218.207.183",80)
 
-uri = URI.parse("https://10.218.207.183")
+uri = URI.parse('https://10.218.207.183')
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
 http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-request = Net::HTTP::Post.new("/api/v1/auth/login")
-request.body = {'credentials' => {'username' => '"><h1>hi</h1>', 'password' => 'key'}}
+request = Net::HTTP::Post.new('/api/v1/auth/login')
+request.body = { 'credentials' => { 'username' => '"><h1>hi</h1>', 'password' => 'key' } }
 response = http.request(request)
 
 puts response.code

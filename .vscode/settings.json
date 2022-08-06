@@ -1,6 +1,0 @@
-{
-    "python.pythonPath": "/Users/jarjohns/.pyenv/versions/3.9.5/envs/Env3-py3/bin/python",
-    "go.toolsEnvVars": {
-        "GOPATH": "/Users/jarjohns/Documents/sec_scripts/go"
-    }
-}

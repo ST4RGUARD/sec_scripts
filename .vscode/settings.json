@@ -1,0 +1,70 @@
+{
+    "launch": {
+        "configurations": [
+            {
+                "name": "python-debug",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "internalConsole"
+            },
+            {
+                "name": "go-debug",
+                "type": "go",
+                "request": "launch",
+                "mode": "auto",
+                "program": "${workspaceRoot}",
+                "env": {},
+                "args": []
+            },
+            {
+                "type": "ruby-debug",
+                "request": "launch",
+                "name": "ruby-debug",
+                "program": "${file}",
+                "programArgs": [],
+                "useBundler": false
+            }
+        ],
+        "compounds": []
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "tabnine.experimentalAutoImports": true,
+    "go.toolsManagement.autoUpdate": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "go.goroot": "",
+    "workbench.iconTheme": "material-icon-theme",
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "html.erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ],
+    "editor.formatOnSave": true,
+    "ruby.rubocop.onSave": true,
+    "editor.tabSize": 2,
+    "code-runner.runInTerminal": true,
+    "editor.accessibilitySupport": "off"
+}

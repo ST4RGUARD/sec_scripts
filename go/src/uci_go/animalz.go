@@ -4,14 +4,14 @@ import (
 	"fmt"
 )
 
-type Animal struct {
+type Animal1 struct {
 	food       string
 	locomotion string
 	noise      string
 }
 
-func animalList() map[string]Animal {
-	return map[string]Animal{
+func animalList1() map[string]Animal1 {
+	return map[string]Animal1{
 		"cow":   {"grass", "walking", "moo"},
 		"bird":  {"worms", "flying", "peep"},
 		"snake": {"mice", "slithering", "hsss"},
@@ -19,20 +19,20 @@ func animalList() map[string]Animal {
 	}
 }
 
-func (a Animal) eat() {
+func (a Animal1) eat() {
 	fmt.Printf("eats %s", a.food)
 }
 
-func (a Animal) move() {
+func (a Animal1) move() {
 	fmt.Printf("moves by %s", a.locomotion)
 }
 
-func (a Animal) speak() {
+func (a Animal1) speak() {
 	fmt.Printf("sounds like %s", a.noise)
 }
 
 func describeAnimal(animalName, info string) {
-	animalMap := animalList()
+	animalMap := animalList1()
 	animal, avail := animalMap[animalName]
 	if !avail {
 		fmt.Println("Unknown Animal")
@@ -52,8 +52,7 @@ func describeAnimal(animalName, info string) {
 }
 
 func getInput() (string, string) {
-	var animal string
-	var info string
+	var animal, info string
 	fmt.Print("> ")
 	fmt.Scanln(&animal, &info)
 

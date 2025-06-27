@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import sys,pefile
+import pefile,pprint
 
 print "./script path/to/file"
 
@@ -8,6 +8,6 @@ print "./script path/to/file"
 file=sys.argv[1]
 pe=pefile.PE(file)
 
-print '[+] Imported DLLs [+]'
-for dlls in pe.DIRECTORY_ENTRY_IMPORT:
-    print '[+] ' , dlls.dll, ' [+]'
+for dll in pe.DIRECTORY_ENTRY_IMPORT:
+    print '[+] Imported DLLs [+]'
+    print '[+] ' , entry.dll, ' [+]'

@@ -13,8 +13,6 @@
 anyio==4.9.0
     # via httpx
     # via jupyter-server
-appnope==0.1.4
-    # via ipykernel
 argon2-cffi==25.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0

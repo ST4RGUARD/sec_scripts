@@ -23,7 +23,7 @@ while cond:
         cond = False
 else:
     print("i die")
-
+# %%
 items = [1, 3, 4]
 
 for num in items:
@@ -31,5 +31,4 @@ for num in items:
 
 for item in range(1, 10, 2):
     print(item)
-
-
+# %%

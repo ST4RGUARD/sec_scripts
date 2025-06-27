@@ -82,6 +82,7 @@ ipython==9.3.0
     # via ipykernel
     # via ipywidgets
     # via jupyter-console
+    # via python
 ipython-pygments-lexers==1.1.1
     # via ipython
 ipywidgets==8.1.7
@@ -237,7 +238,6 @@ pyzmq==27.0.0
     # via jupyter-client
     # via jupyter-console
     # via jupyter-server
-    # via python
 referencing==0.36.2
     # via jsonschema
     # via jsonschema-specifications
